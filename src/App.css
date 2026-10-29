@@ -1,43 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', 'Comic Sans MS', Arial, sans-serif;
+  background-color: #fce4ec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: #f4f4f4;
+  width: 100%;
+  padding: 20px;
 }
 
+/* Calculator Outer Body */
 .calculator {
-  background: #fff;
-  padding: 24px 30px 30px 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-  min-width: 270px;
+  background-color: #ff85a2;
+  border: 5px solid #4a1525;
+  border-radius: 28px;
+  padding: 25px 20px 30px 20px;
+  box-shadow: 0 10px 0 #4a1525;
+  width: 380px;
+  text-align: center;
+  position: relative;
 }
 
+/* Header Text */
+.header {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #4a1525;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Solar Panel Decorative Bar */
+.solar-panel {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3px;
+  background-color: #3d3b3c;
+  border: 3px solid #4a1525;
+  border-radius: 4px;
+  padding: 3px;
+  width: 140px;
+  margin: 0 0 12px auto;
+}
+
+.solar-cell {
+  flex: 1;
+  height: 14px;
+  background-color: #1a1a1a;
+  border-right: 1px solid #555;
+}
+
+.solar-cell:last-child {
+  border-right: none;
+}
+
+/* Display Screen */
 .display {
   width: 100%;
-  height: 40px;
-  font-size: 1em;
-  margin-bottom: 16px;
+  height: 70px;
+  background-color: #a3acb1;
+  border: 4px solid #4a1525;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #2b2b2b;
   text-align: center;
-  border: none;
-  background: #eee;
-  border-radius: 5px;
-  padding: 7px;
+  margin-bottom: 22px;
+  padding: 10px;
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Button Grid Setup */
 .buttons {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 14px;
 }
 
-button {
-  font-size: 1.2em;
-  padding: 15px;
-  border: none;
-  border-radius: 5px;
-  background: #e0e0e0;
+/* Retro Blue 3D Button Styling */
+.calc-button {
+  background-color: #d8f3ff;
+  border: 3px solid #4a1525;
+  border-radius: 14px;
+  padding: 18px 0;
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #4a1525;
   cursor: pointer;
-  transition: background 0.2s;
+  box-shadow: 0 5px 0 #4a1525;
+  transition: all 0.08s ease;
+}
+
+.calc-button:hover {
+  background-color: #c0eaef;
+}
+
+.calc-button:active {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 #4a1525;
 }
